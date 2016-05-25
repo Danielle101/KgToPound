@@ -2,6 +2,8 @@ package kgToPound;
 
 import java.util.Scanner;
 
+import inchConverter.Validator;
+
 public class KgToPound {
 
 	public static void main(String[] args) {
@@ -17,7 +19,13 @@ public class KgToPound {
 			System.out.println("Selection Menu:\n1 for Kilograms to Pounds\n2 for Pounds to Kilograms");
 			System.out.println("\nPlease enter a number (1 or 2):");
 			int userSelect = Validator.getValidInt(1, 2);
-
+			if (userSelect == 1) {
+				System.out.println("Please enter your measurement in kilograms:");
+				double userKilo = Validator.readValidInt();
+				double LBSCon = userKilo * 2.2;
+				System.out.println(userKilo + " kilograms is equivalent to " + LBSCon + " pounds.");
+			
 	}
 
+}
 }
